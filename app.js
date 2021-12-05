@@ -1,4 +1,10 @@
-const arr = ['happy', 'new', 'year', ':)']
-for (let i = 0; i <= arr.length; i++){
-console.log(arr[i])
-}
+const express = require('express')
+const app = express()
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening at http://localhost:${process.env.PORT}`)
+})
