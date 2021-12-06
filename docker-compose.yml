@@ -13,6 +13,6 @@ services:
     image: mongo
     container_name: mongodb
     volumes:
-    - /usr/db/mongo
+    - ../db:/data/db:rw
     ports:
-    - 27017:27017
+    - "27017:27017"
