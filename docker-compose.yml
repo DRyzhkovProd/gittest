@@ -1,8 +1,18 @@
 services:
   server:
+    container_name: server
     build: .
     volumes:
       - .:/usr/app/
       - /usr/app/node_modules
     ports:
       - "3000:3000"
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    volumes:
+    - /usr/db/mongo
+    ports:
+    - 27017:27017
