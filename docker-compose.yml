@@ -2,9 +2,6 @@ services:
   server:
     container_name: server
     build: "./server"
-    volumes:
-      - .:/usr/app/
-      - /usr/app/node_modules
     ports:
       - "3000:3000"
     depends_on:
