@@ -1,7 +1,6 @@
 FROM node:17-alpine
 WORKDIR /opt
 ENV PORT=3000
-ADD . .
 COPY ["**.json", "./"]
-RUN npm install
+ADD . .
 CMD ["node", "app.js"]
